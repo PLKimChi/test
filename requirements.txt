@@ -1,0 +1,8 @@
+Keras
+numpy
+opencv-python
+scikit-learn
+sklearn
+streamlit
+tensorflow
+Pillow
