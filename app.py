@@ -50,7 +50,7 @@ sign_names = {
 
 st.title("Traffic Sign Classifier")
 
-uploaded_file = st.file_uploader("Choose an image...", type="png")
+uploaded_file = st.sidebar.file_uploader("Choose a JPG, JPEG or PNG file", type=["jpg","jpeg","png"])
 if uploaded_file is not None:
 
         image = Image.open(uploaded_file)
