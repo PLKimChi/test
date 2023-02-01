@@ -10,11 +10,7 @@ import streamlit as st
  
 
 
-html_temp = """
-    <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Traffic Sign Classifier </h2>
-    </div>
-    """
+st.title("Traffic Sign Classifier")
 
 #this markdown line allows us to display the front end aspects we have  
 # defined in the code 
@@ -58,7 +54,7 @@ else:
     image = np.array(image).reshape(1,30,30,3).astype(float)
     image=image/255
      
-    pred = model.predict_classes(image)
+    pred = model.predict(image)
 
     def getClassName(classNo):
         if classNo == 0:
