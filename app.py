@@ -61,7 +61,7 @@ if uploaded_file is not None:
         if st.button('predict'):
                 st.write("Result...")
                 label = classify.predict(uploaded_file)
-                #label = label.item()
+                label=np.argmax(label)
 
-                res = sign_names.get(label[0])
+                res = sign_names.get(label)
                 st.markdown(res)
