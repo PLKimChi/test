@@ -17,6 +17,6 @@ def predict(image):
         image = image/255.0
         image = np.reshape(image,[1,32,32,1])
 
-        classes = loaded_model.predict_classes(image)
+        classes = loaded_model.predict(image)
 
         return classes
